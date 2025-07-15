@@ -14,13 +14,21 @@ Se nome e idade forem digitados:
 """
 
 nome = str(input("Digite seu nome: "))
-idade = int(input("Digite sua idade: "))
+idade = str(input("Digite sua idade: "))
 nome_invertido = nome[::-1]
 
 if nome and idade:
     print(f"Seu nome é {nome}")
     print(f"Seu nome invertido é {nome_invertido}")
-elif " " in nome:
-    print(f"Seu nome contém espaços")
+    
+    if " " in nome:
+        print(f"Seu nome {nome} contém espaços")
+    else:
+        print(f"Seu nome {nome} não contém espaços")
+    
+    print(f"Seu nome {nome} tem {len(nome)} letras")
+    print(f"A primeira letra do seu nome é {nome[0]}")
+    
+
 else:
-    print(f"Seu nome não contém espaços")
+    print("Desculpe, você deixou os campos vazios")
