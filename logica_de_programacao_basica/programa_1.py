@@ -5,7 +5,7 @@ inteiro, informe que não é um número inteiro.
 """
 
 # PAR OU IMPAR?
-
+ 
 entrada = input("Digite um número inteiro:")
 is_digit = entrada.isdigit()
 
