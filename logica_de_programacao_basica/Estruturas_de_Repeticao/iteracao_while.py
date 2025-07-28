@@ -7,7 +7,7 @@ letra_apareceu_mais_vezes = ''
 while i < len(frase):
     letra_atual = frase[i]
 
-    if letra_atual == ' ':
+    if letra_atual == 'a':
         i += 1
         continue
 
