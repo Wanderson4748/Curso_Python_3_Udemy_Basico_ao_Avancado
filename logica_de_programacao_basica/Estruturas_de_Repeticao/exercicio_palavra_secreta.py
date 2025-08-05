@@ -1,13 +1,33 @@
-palavra_secreta = 'Perfume'
-palavra_atual = '*' * len(palavra_secreta)
-tentativas = 0
+import os
 
-while '*' in palavra_atual:
-    letra = input('Digite uma letra: ').lower()
-    nova_palavra = ''
+palavra_secreta = 'perfume'
+letras_acertadas = ''
+numero_tentativas = 0
+
+while True:
+    letra_digitada = input('Digite uma letra: ')
+    numero_tentativas += 1
+
+    if letra_digitada.isdigit() or len(letra_digitada) > 1:
+        print('Digite apenas uma letra.')
+        continue
     
-    for i in range(len(palavra_secreta)):
-        if letra == palavra_secreta[i]:
-            nova_palavra += letra
+    if letra_digitada in palavra_secreta:
+        letras_acertadas += letra_digitada
+    
+    palavra_formada = ''
+    for letra_secreta in palavra_secreta:
+        if letra_secreta in letras_acertadas:
+            palavra_formada += letra_secreta
         else:
-            nova_palavra += palavra_atual[i]
+            palavra_formada += '*'
+    
+    print(palavra_formada)
+
+    if palavra_formada == palavra_secreta:
+        os.system('cls')
+        print('Você ganhou! Parabéns! ')
+        print('A palavra era', palavra_secreta)
+        print('O numero de tentativas foi', numero_tentativas)
+        letras_acertadas = ''
+        numero_tentativas = 0
