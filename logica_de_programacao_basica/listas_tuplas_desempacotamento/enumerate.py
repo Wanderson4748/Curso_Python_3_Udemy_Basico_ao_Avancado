@@ -1,5 +1,8 @@
 """
 enumerate - enumera iteráveis (índices)
+
+# tupla - lista imutável
+# lista - lista mutável
 """
 tupla = 'Wanderson', 'Tiago', 'Josué'
 lista1 = list(tupla)
@@ -44,3 +47,9 @@ lista4.append('lista4')
 
 for indice, nome in enumerate(lista4):
     print(indice, nome)
+    
+tupla_teste = 'Gabriel', 'Fernando', 'João'
+tupla_enumerada = enumerate(tupla_teste)
+
+for item in tupla_enumerada:
+      print(item)
