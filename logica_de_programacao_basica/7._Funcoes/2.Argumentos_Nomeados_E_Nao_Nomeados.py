@@ -2,6 +2,8 @@
 Argumentos nomeados e não nomeados em funções Python
 Argumento nomeado tem nome com sinal de igual (=)
 Argumento não nomeado recebe apenas o argumento (valor)
+
+Refatorar: editar o seu código.
 """
 def soma(x, y, z=None):
     if z is not None:
