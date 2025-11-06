@@ -39,3 +39,5 @@ print()
 
 for chave in pessoa:
     print(chave, pessoa[chave])
+    
+print("printando um dir aqui do dicionario",dir(pessoa))
